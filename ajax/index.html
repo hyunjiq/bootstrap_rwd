@@ -10,14 +10,17 @@
     <!-- 폰트 / woff2-->
     <link rel="stylesheet" href="/css/reset.min.css">
     <link rel="stylesheet" href="/css/boot.css?version=5.0&work=lhj">
+    <link rel="stylesheet" href="/css/layout.min.css">
     <!-- 내꺼 min -->
 </head>
 <body>
-  <header id="hd" class="border-bottom fixed-top bg-white">
+  <header id="hd" class="border-bottom fixed-top">
     <nav class="navbar navbar-expand-md ">
         <div class="container-lg">
             <h1>
-                <a class="navbar-brand" href="#">svg로고만들기</a>
+                <a class="navbar-brand" href="#">
+                  <span><span>랄랄라</span>로고</span>
+                </a>
             </h1>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -82,21 +85,25 @@
 <section id="swiper" class="vh-100 bg-light">
 
 </section>
-<section id="portfolio" class="vh-100 bg-dark pt-5">
-  <ul class="nav nav-tabs my-5">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-  </ul>
+<section id="portfolio" class="vh-100 bg-light pt-5">
+  <div class="container  mt-5">
+    <ul class="nav nav-tabs  my-5" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+      </li>
+    </ul>
+    <div class="tab-content  " id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
+  </div>
 </section>
 <section id="team-portfoilo" class="vh-100 bg-light"></section>
 <section id="community" class="vh-100 bg-dark"></section>
@@ -114,6 +121,7 @@
 <script src="/lib/jquery-2.2.4.min.js"></script> 
 <!-- 제이쿼리내꺼 -->
 <script src="/ajax/js/ajax.js"></script>
+<script src="/ajax/js/ui.js?event=scroll"></script>
 
   
 </body>
